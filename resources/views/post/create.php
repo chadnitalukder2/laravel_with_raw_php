@@ -7,7 +7,8 @@
 </head>
 <body>
     <h1>Create New Post</h1>
-    <form>
+    <form action="<?= url('post/store') ?>" method="post">
+        <?= csrf_field() ?> 
         <input type="text" name="title" placeholder="Title Here"><br><br>
         <textarea name="details" cols="30" rows="10" placeholder="Details"></textarea><br><br>
         <button>Submit</button>
