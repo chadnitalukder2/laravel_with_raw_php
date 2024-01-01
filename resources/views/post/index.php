@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>All Posts</h1>
-    <table border="1" width="100%">
+    <table border="1" width="80%">
         <thead>
             <th>Serial No</th>
             <th>Title</th>
@@ -20,7 +20,9 @@
                 <td><?= $post->id ?></td>
                 <td><?= $post->title ?></td>
                 <td><?= $post->details ?></td>
-                <td>Show || Edit || Delete</td>
+                <td>
+                    <a href="<?= url('post/show', $post->id) ?>">Show Details</a>
+                 || Edit || Delete</td>
             </tr>
             <?php } ?>
         </tbody>

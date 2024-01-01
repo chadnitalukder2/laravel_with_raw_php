@@ -28,6 +28,11 @@ class PostController extends Controller
 
         //dd(DB::table('posts')->get());
         return redirect('posts');
+    }
 
+    public function show($id)
+    {
+        $data['post'] = DB::table('posts')->where('id', $id)->first();
+        return view('post/show',$data);
     }
 }
