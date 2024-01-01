@@ -24,6 +24,10 @@ Route::post('post/store',[PostController::class, 'store']);
 
 Route::get('post/show/{id}',[PostController::class, 'show']);
 Route::get('post/edit/{id}',[PostController::class, 'edit']);
+Route::get('post/update/{id}',[PostController::class, 'update']);
+
+
+
 
 
 

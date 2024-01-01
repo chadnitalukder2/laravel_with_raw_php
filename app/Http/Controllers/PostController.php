@@ -41,4 +41,21 @@ class PostController extends Controller
         $data['post'] = DB::table('posts')->where('id', $id)->first();
         return view('post/edit',$data);
     }
+
+    public function update(Request $request, $id)
+    {
+        $data['title'] = $request->title;
+        $data['details'] = $request->details;
+
+        DB::table('posts')->where('id', $id)->update($data);
+
+        //dd(DB::table('posts')->get());
+        return redirect('posts');
+    }
+
+
+
+
+
+
 }

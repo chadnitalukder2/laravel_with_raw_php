@@ -21,8 +21,8 @@
                 <td><?= $post->title ?></td>
                 <td><?= $post->details ?></td>
                 <td>
-                    <a href="<?= url('post/show', $post->id) ?>">Show Details</a>
-                    <a href="<?= url('post/edit', $post->id) ?>">Edit</a>
+                    <a href="<?= url('post/show', $post->id) ?>">Show Details</a> ||
+                    <a href="<?= url('post/edit', $post->id) ?>">Edit</a> ||
                     <a href="<?= url('post/show', $post->id) ?>">Delete</a>
                 </td>
             </tr>
