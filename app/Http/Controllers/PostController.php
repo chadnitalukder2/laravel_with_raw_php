@@ -35,4 +35,10 @@ class PostController extends Controller
         $data['post'] = DB::table('posts')->where('id', $id)->first();
         return view('post/show',$data);
     }
+    
+    public function edit($id)
+    {
+        $data['post'] = DB::table('posts')->where('id', $id)->first();
+        return view('post/edit',$data);
+    }
 }
