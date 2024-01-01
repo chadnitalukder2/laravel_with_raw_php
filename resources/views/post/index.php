@@ -23,13 +23,13 @@
                 <td>
                     <a href="<?= url('post/show', $post->id) ?>">Show Details</a> ||
                     <a href="<?= url('post/edit', $post->id) ?>">Edit</a> ||
-                    <a href="<?= url('post/delete', $post->id) ?>">delete</a>
+                    <!-- <a href="<?= url('post/delete', $post->id) ?>">delete</a> -->
 
-                    <!-- <form action="<?= url('post/delete', $post->id) ?>" method="Post"> 
+                    <form action="<?= url('post/delete', $post->id) ?>" method="Post"> 
                     <?= csrf_field() ?> 
                     <input hidden type="text" name="_method" value="DELETE">
                     <button>Delete</button>
-                    </form> -->
+                    </form>
                 </td>
             </tr>
             <?php } ?>
