@@ -25,9 +25,9 @@ Route::post('post/store',[PostController::class, 'store']);
 Route::get('post/show/{id}',[PostController::class, 'show']);
 Route::get('post/edit/{id}',[PostController::class, 'edit']);
 Route::get('post/update/{id}',[PostController::class, 'update']);
+//Route::delete('post/delete/{id}',[PostController::class, 'destroy']);
 
-
-
+Route::get('post/delete/{id}',[PostController::class, 'destroy']);
 
 
 
