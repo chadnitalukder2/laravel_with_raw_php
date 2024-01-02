@@ -7,6 +7,7 @@
 </head>
 <body>
     <h1>Create New Post</h1>
+    <h2><a href="<?= route('post.index') ?>">All Post</h2>
     <form action="<?= url('post/store') ?>" method="post">
         <?= csrf_field() ?> 
         <input type="text" name="title" placeholder="Title Here"><br><br>
