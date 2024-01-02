@@ -21,6 +21,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.dashboard');
 });
+Route::view('/home', 'frontend.dashboard')->name('home');
+Route::view('/about', 'frontend.about')->name('about');
+Route::view('/contact', 'frontend.contact')->name('contact');
 
 Route::controller(PostController::class)->name('post.')->group(function () {
 
