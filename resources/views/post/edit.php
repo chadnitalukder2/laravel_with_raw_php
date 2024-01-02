@@ -8,8 +8,10 @@
 <body>
     <h1>Edit Post</h1>
     <form action="<?= url('post/update',$post->id) ?>" method="GET">
-        <?= csrf_field() ?> 
-        <input hidden type="text" name="_method" value="PUT">
+        <?php # csrf_field() ?> 
+        <!-- <input hidden type="text" name="_method" value="PUT"> -->
+        @csrf
+        @method('PUT')
         <input value="<?= $post->title ?>" type="text" name="title" placeholder="Title Here"><br><br>
         <textarea  name="details" cols="30" rows="10" placeholder="Details"><?= $post->details ?></textarea><br><br>
         <button>update</button>

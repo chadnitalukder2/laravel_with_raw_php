@@ -26,8 +26,10 @@
                     <!-- <a href="<?= url('post/delete', $post->id) ?>">delete</a> -->
 
                     <form action="<?= url('post/delete', $post->id) ?>" method="Post"> 
-                    <?= csrf_field() ?> 
-                    <input hidden type="text" name="_method" value="DELETE">
+                   <?php #csrf_field() ?>  <!--  exchange-->
+                    @csrf
+                    <!-- <input hidden type="text" name="_method" value="DELETE">   exchange-->
+                    @method('DELETE')
                     <button>Delete</button>
                     </form>
                 </td>
