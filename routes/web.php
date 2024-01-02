@@ -18,10 +18,12 @@ use Illuminate\Support\Facades\Route;
     return view('welcome');
 });*/
 
-Route::get('/', function () {
-    return view('frontend.dashboard');
-});
-Route::view('/home', 'frontend.dashboard')->name('home');
+/* Route::get('/', function () {
+//     return view('frontend.home');
+ });*/
+
+
+Route::view('/', 'frontend.home')->name('home');
 Route::view('/about', 'frontend.about')->name('about');
 Route::view('/contact', 'frontend.contact')->name('contact');
 
