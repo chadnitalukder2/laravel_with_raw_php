@@ -18,16 +18,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('posts',[PostController::class, 'index'])->name('post.index');
-Route::get('post/create',[PostController::class, 'create'])->name('post.create');
-Route::post('post/store',[PostController::class, 'store'])->name('post.store');
+Route::prefix('admin')->name('post.')->group(function () {
 
-Route::get('post/show/{id}',[PostController::class, 'show'])->name('post.show');
-Route::get('post/edit/{id}',[PostController::class, 'edit'])->name('post.edit');
-Route::get('post/update/{id}',[PostController::class, 'update'])->name('post.update');
-Route::delete('post/delete/{id}',[PostController::class, 'destroy'])->name('post.destroy');
+Route::get('posts',[PostController::class, 'index'])->name('index');
+Route::get('post/create',[PostController::class, 'create'])->name('create');
+Route::post('post/store',[PostController::class, 'store'])->name('store');
+Route::get('post/show/{id}',[PostController::class, 'show'])->name('show');
+Route::get('post/edit/{id}',[PostController::class, 'edit'])->name('edit');
+Route::get('post/update/{id}',[PostController::class, 'update'])->name('update');
+Route::delete('post/delete/{id}',[PostController::class, 'destroy'])->name('destroy');
 
 //Route::get('post/delete/{id}',[PostController::class, 'destroy']);  #worng proces
-
+});
 
 
