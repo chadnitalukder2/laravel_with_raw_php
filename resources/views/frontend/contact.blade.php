@@ -10,6 +10,7 @@
 @section('content')
    <div>
     <h1>This is contact content area</h1>
+    <x-header/>
    </div>
 @endsection
 

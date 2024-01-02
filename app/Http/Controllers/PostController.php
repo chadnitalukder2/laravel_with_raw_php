@@ -11,6 +11,7 @@ class PostController extends Controller
     {
         $data['posts'] = (DB::table('posts')->get());
         //dd($data);
+        return $data;
         return view('post/index',$data);
     }
 

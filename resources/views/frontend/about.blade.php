@@ -9,8 +9,9 @@
 
 @section('content')
    <div>
-    <h1>This is about content area</h1>
-   </div>
+        <h1>This is about content area</h1>
+        <x-header/>
+  </div>
 @endsection
 
 
