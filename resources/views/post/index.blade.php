@@ -15,6 +15,7 @@
             <th>Action</th>
         </thead>
         <tbody>
+              {{-- <?php # foreach($posts as $post){ ?> --}}
             @foreach ($posts as $post)
                 <tr>
                     <td>{{ $post->id }}</td>
@@ -23,14 +24,18 @@
                     <td>
                         <a href="{{ route('post.show', $post->id) }}">Show Details</a> ||
                         <a href="{{ route('post.edit', $post->id) }}">Edit</a> ||
+                        <!-- <a href=" # url('post/delete', $post->id) ">delete</a> -->
                         
                         <form action="{{ route('post.destroy', $post->id) }}" method="POST"> 
+                             <!--  #csrf_field()  exchange-->
+                            <!-- <input hidden type="text" name="_method" value="DELETE">   exchange-->
                             @csrf
                             @method('DELETE')
                             <button>Delete</button>
                         </form>
                     </td>
                 </tr>
+            <?php# } ?>
             @endforeach
         </tbody>
     </table>

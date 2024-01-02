@@ -7,6 +7,10 @@
 </head>
 <body>
     <h1>Edit Post</h1>
+       {{-- <form action="<= url('post/update',$post->id) ?>" method="GET"> --}}
+        {{-- < = csrf_field() ?>  --}}
+        <!-- <input hidden type="text" name="_method" value="PUT"> -->
+        
     <form action="{{ route('post.update', $post->id) }}" method="GET">
         @csrf
         @method('PUT')
