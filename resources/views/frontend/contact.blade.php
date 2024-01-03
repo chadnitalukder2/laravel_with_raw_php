@@ -10,7 +10,12 @@
 @section('content')
    <div>
     <h1>This is contact content area</h1>
-    <x-header/>
+    <x-header>
+        <span>This is sub Header form Contact page</span>
+        <x-slot:title>
+            <span>This is Name Slot form contact</span>
+        </x-slot:title>
+    </x-header>
    </div>
 @endsection
 
