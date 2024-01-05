@@ -7,8 +7,8 @@
 </head>
 <body>
     <h1>Show Single Post</h1>
-    <h2><?= #$post->id ?> {{ $post->id  }}</h2>
-    <h2><?= #$post->title ?> {{ $post->title }}</h2>
-    <h2><?= #$post->details ?> {{ $post->details }}</h2>
+    <h2>{{ $post->id  }}</h2>
+    <h2> {{ $post->title }}</h2>
+    <h2>{{ $post->details }}</h2>
 </body>
 </html>

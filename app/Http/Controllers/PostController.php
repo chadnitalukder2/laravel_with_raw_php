@@ -11,7 +11,7 @@ class PostController extends Controller
     {
         $data['posts'] = (DB::table('posts')->get());
         //dd($data);
-        return $data;
+        // return $data;
         return view('post/index',$data);
     }
 
@@ -22,11 +22,12 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        //dd($request->test);
         $data['title'] = $request->title;
         $data['details'] = $request->details;
-
+        //dd($data);
         DB::table('posts')->insert($data);
-
+        
         //dd(DB::table('posts')->get());
         return redirect('posts');
     }
@@ -60,9 +61,6 @@ class PostController extends Controller
 
         return redirect('posts');
     }
-
-
-
 
 
 }
